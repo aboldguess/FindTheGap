@@ -1,0 +1,20 @@
+name: find_the_gap_mobile
+
+# Flutter project configuration for the FindTheGap AR prototype.
+# Defines environment and dependencies. See lib/main.dart for app entry point.
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  ar_flutter_plugin: ^0.7.3
+  provider: ^6.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
