@@ -27,6 +27,22 @@ flutter pub get
 flutter run -d windows # or specify connected device
 ```
 
+### Android Device
+Enable developer mode and USB debugging on your phone, then:
+
+#### Linux & Raspberry Pi
+```bash
+cd mobile_app
+./run_android.sh [device-id]
+```
+
+#### Windows
+```powershell
+cd mobile_app
+flutter pub get
+flutter run -d <device-id>
+```
+
 ### Programmatic Checks
 Run static analysis to catch issues early:
 ```bash
