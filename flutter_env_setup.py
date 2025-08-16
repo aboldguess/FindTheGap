@@ -62,10 +62,10 @@ class SetupGUI(tk.Tk):
 
     def create_widgets(self) -> None:
         self.text = scrolledtext.ScrolledText(self, state="disabled")
-        self.text.pack(expand=True, fill="both", padx=5, pady=5)
+        self.text.pack(side="top", expand=True, fill="both", padx=5, pady=5)
 
         self.start_button = tk.Button(self, text="Start Setup", command=self.run_setup)
-        self.start_button.pack(pady=5)
+        self.start_button.pack(side="bottom", pady=5)
 
     def log(self, message: str) -> None:
         logging.info(message)
