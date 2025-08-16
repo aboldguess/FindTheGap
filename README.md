@@ -9,7 +9,24 @@ We use **Flutter** with the `ar_flutter_plugin` to achieve AR on both Android an
 - `mobile_app/` – Flutter client prototype.
 - `TODO.md` – Project backlog.
 
-## Setup
+## Automated Flutter Setup
+Run the helper script to install Flutter and configure the environment automatically. A small GUI displays progress and falls back to alternative methods if the first attempt fails. Logging is written to `flutter_setup.log` for troubleshooting.
+
+### Windows
+```powershell
+py -3 -m venv .venv
+./.venv/Scripts/Activate.ps1
+python flutter_env_setup.py
+```
+
+### Linux & Raspberry Pi
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python flutter_env_setup.py
+```
+
+## Manual Setup
 
 ### Linux & Raspberry Pi
 ```bash
