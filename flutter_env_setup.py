@@ -61,11 +61,18 @@ class SetupGUI(tk.Tk):
         self.log("Click 'Start Setup' to begin installing Flutter.")
 
     def create_widgets(self) -> None:
-        self.text = scrolledtext.ScrolledText(self, state="disabled")
-        self.text.pack(side="top", expand=True, fill="both", padx=5, pady=5)
+        """Create GUI elements.
+
+        The order of packing matters when using ``tkinter``. The start button is
+        packed first so the subsequent text widget expands only in the remaining
+        space, ensuring the button stays visible at the bottom of the window.
+        """
 
         self.start_button = tk.Button(self, text="Start Setup", command=self.run_setup)
         self.start_button.pack(side="bottom", pady=5)
+
+        self.text = scrolledtext.ScrolledText(self, state="disabled")
+        self.text.pack(side="top", expand=True, fill="both", padx=5, pady=5)
 
     def log(self, message: str) -> None:
         logging.info(message)
